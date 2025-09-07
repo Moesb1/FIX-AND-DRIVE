@@ -1,0 +1,58 @@
+
+/* Fix and Drive LLC - Clean, modern single-page layout */
+*{box-sizing:border-box}
+:root{
+  --bg:#0d0f13;
+  --fg:#e9eef4;
+  --muted:#b7c1cd;
+  --accent:#e53935; /* red */
+  --card:#151923;
+  --maxw:1120px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--fg);text-decoration:none}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:14px 20px;border-radius:10px;background:var(--accent);color:white;font-weight:700;letter-spacing:.3px;box-shadow:var(--shadow);transition:.2s transform,.2s filter}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn.outline{background:transparent;border:2px solid var(--accent);color:var(--fg)}
+header.nav{position:sticky;top:0;z-index:900;background:rgba(13,15,19,.75);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;gap:14px;align-items:center}
+.brand img{width:40px;height:40px;border-radius:8px;object-fit:cover}
+.brand .name{font-weight:800;letter-spacing:.6px}
+nav a{margin-left:18px;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+.hero{position:relative;isolation:isolate;padding:90px 0 70px;background:radial-gradient(1200px 300px at 50% 0%, rgba(229,57,53,.28), transparent 60%)}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+h1{font-size:48px;line-height:1.1;margin:0 0 14px}
+p.lead{font-size:18px;color:var(--muted);margin:0 0 26px}
+.badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.badge{padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted);font-size:14px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:var(--shadow)}
+.services{padding:70px 0}
+.services h2,.about h2,.gallery h2,.contact h2{font-size:36px;margin:0 0 20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:920px){.hero .grid{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){h1{font-size:36px}.grid-3{grid-template-columns:1fr}}
+.service{padding:22px}
+.service h3{margin:6px 0 8px}
+.service p{color:var(--muted);font-size:15px;margin:0}
+.service .icon{width:28px;height:28px;border-radius:8px;background:rgba(229,57,53,.15);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.kpi{display:flex;gap:18px;margin-top:18px;color:var(--muted)}
+.kpi .item{padding:12px;border:1px dashed rgba(255,255,255,.15);border-radius:12px}
+.about{padding:70px 0}
+.about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+@media(max-width:920px){.about .wrap{grid-template-columns:1fr}}
+.gallery{padding:70px 0}
+.gallery .row{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+@media(max-width:920px){.gallery .row{grid-template-columns:1fr}}
+.gallery .stack{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.gallery img{border-radius:14px;border:1px solid rgba(255,255,255,.06)}
+.contact{padding:70px 0}
+.contact .box{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:920px){.contact .box{grid-template-columns:1fr}}
+footer{padding:30px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+.cred{color:#8896a5}
